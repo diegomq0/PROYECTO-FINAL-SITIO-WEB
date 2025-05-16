@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citas | Piojitos</title>
+  <link rel="stylesheet" href="css/citas.css">
+  <link rel="shortcut icon" href="img/Piojitos-Logo.svg">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fbfbf0;
+    }
+
+    header.header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #fbfbf0;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #b695d9;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #9e77b7;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fbfbf0;
+        display: none;
+        flex-direction: column;
+        border-top: 1px solid #ddd;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      nav ul li {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .title-section h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-top: 40px;
+      color: #9ac7dd;
+    }
+
+    .appointments {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .appointment-card {
+      background-color: #f0f8ff;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px #9ac7dd;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .appointment-card h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #89c4e2;
+    }
+
+    .appointment-card img {
+      width: 120px;
+      margin-bottom: 25px;
+    }
+
+    .appointment-card button {
+      background-color: #9ac7dd;
+      border: none;
+      color: white;
+      padding: 18px 36px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .appointment-card button:hover {
+      background-color: #89c4e2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 10px;
+      background-color: #fbfbf0;
+    }
+
+    .social-links img {
+      width: 10px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-container">
+    <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+      <img src="img/Piojitos-01.svg" alt="Piojitos Logo">
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">inicio</a></li>
+        <li><a href="sobrenosotros.html">sobre nosotros</a></li>
+        <li><a href="promociones.html">promociones</a></li>
+        <li><a href="ProductosCliente.html">productos</a></li>
+        <li><a href="citas.html">agendar cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="title-section">
+    <h1>Citas</h1>
+  </section>
+
+  <section class="appointments">
+    <div class="appointment-card">
+      <h2>Agenda tu cita</h2>
+      <img src="img/agenda.webp" alt="Agenda Icon"><br>
+      <button onclick="location.href='formCitas.html'">Agendar ahora</button>
+    </div>
+  </section>
+
+   <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+      <a href="mapaSitio.html"><img src="img/mapa-mental.png" alt="Mapa del Sitio" /></a>
+    </div>
+    <p>© 2025 Piojitos. All rights reserved</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+  
+
+</html>

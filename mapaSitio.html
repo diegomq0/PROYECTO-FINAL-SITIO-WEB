@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa del Sitio - Piojitos</title>
+  <link rel="shortcut icon" href="img/Piojitos-Logo.svg" />
+  <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&display=swap" />
+  <style>
+    /* Estilos reutilizados */
+    body {
+      background-color: #fbfbf0;
+      color: #2f2f2f;
+      font-family: 'Satoshi', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #fbfbf0;
+    }
+
+    .header-container, footer {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #b695d9;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #9e77b7;
+    }
+
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mapa-container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .mapa-columna {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      width: 300px;
+      text-align: left;
+    }
+
+    .mapa-columna h2 {
+      color: #b695d9;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .mapa-columna ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .mapa-columna ul li {
+      margin: 0.5rem 0;
+    }
+
+    .mapa-columna ul li a {
+      color: #2f2f2f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .mapa-columna ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    footer {
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header-container">
+    <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+      <img src="img/Piojitos-01.svg" alt="Piojitos Logo" />
+    </div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">inicio</a></li>
+        <li><a href="sobrenosotros.html">sobre nosotros</a></li>
+        <li><a href="promociones.html">promociones</a></li>
+        <li><a href="ProductosCliente.html">productos</a></li>
+        <li><a href="citas.html">agendar Cita</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mapa del Sitio</h1>
+    <p>Explora las secciones disponibles según tu tipo de usuario:</p>
+
+    <div class="mapa-container">
+      <!-- Cliente -->
+      <div class="mapa-columna">
+        <h2>Cliente</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="ProductosCliente.html">Productos</a></li>
+          <li><a href="citas.html">Agendar Cita</a></li>
+          <li><a href="iniciarSesion.html">Iniciar Sesión</a></li>
+        </ul>
+      </div>
+
+      <!-- Administrador -->
+      <div class="mapa-columna">
+        <h2>Administrador</h2>
+        <ul>
+          <li><a href="panelAdmin.html">Panel Principal</a></li>
+          <li><a href="adminProductos.html">Gestión de Productos</a></li>
+          <li><a href="adminCitas.html">Gestión de Citas</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+        <section style="margin-top: 3rem;">
+      <h1>Paleta de Colores</h1>
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background-color: #CED9ED; border-radius: 10px; border: 1px solid #ccc;"></div>
+          <p>#CED9ED</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background-color: #E4D4DE; border-radius: 10px; border: 1px solid #ccc;"></div>
+          <p>#E4D4DE</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background-color: #DCC3D9; border-radius: 10px; border: 1px solid #ccc;"></div>
+          <p>#DCC3D9</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background-color: #A9CED4; border-radius: 10px; border: 1px solid #ccc;"></div>
+          <p>#A9CED4</p>
+        </div>
+        <div style="text-align: center;">
+          <div style="width: 80px; height: 80px; background-color: #B4A2D2; border-radius: 10px; border: 1px solid #ccc;"></div>
+          <p>#B4A2D2</p>
+        </div>
+      </div>
+    </section>
+
+  <section style="margin-top: 3rem;">
+  <h1>Tipografías</h1>
+  <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; border-top: 2px solid black; padding-top: 2rem; border-bottom: 2px solid black; flex-wrap: wrap;">
+
+    <!-- Aesthetic -->
+    <div style="text-align: center; flex: 1 1 250px;">
+      <h3>Tipografía del imagotipo:</h3>
+      <p style="font-family: 'Aesthetic Regular', serif; font-weight: bold; font-size: 18px;">Aesthetic Regular</p>
+      <p style="font-family: 'Aesthetic Regular', serif; font-size: 20px; line-height: 1.5;">
+        ΛBCDEFGHIJKLMNÑOPQ<br>
+        RSTUVWXYZ
+      </p>
+    </div>
+
+    <!-- PT Serif -->
+    <div style="text-align: center; flex: 1 1 250px;">
+      <h3>Tipografía del contenido:</h3>
+      <p style="font-family: 'PT Serif', serif; font-weight: bold; font-size: 18px;">PT Serif</p>
+      <p style="font-family: 'PT Serif', serif; font-size: 16px; line-height: 1.5;">
+        abcdefghijklmnñopqrst<br>
+        uvwxyz<br>
+        ABCDEFGHIJKLMNOPQ<br>
+        RSTUVWXYZ
+      </p>
+    </div>
+
+    <!-- Maison -->
+    <div style="text-align: center; flex: 1 1 250px;">
+      <h3>Tipografía alternativa:</h3>
+      <p style="font-family: monospace; font-size: 18px; font-weight: bold;">Maison / Maison Mono</p>
+      <p style="font-family: monospace; font-size: 16px; line-height: 1.5;">
+        Maison &<br>
+        Maison Mono<br>
+        Regular – Monospaced
+      </p>
+      <p style="font-size: 14px; color: gray;">Grotesque Sans – Latin European</p>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+ <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+      <a href="mapaSitio.html"><img src="img/mapa-mental.png" alt="Mapa del Sitio" /></a>
+    </div>
+    <p>© 2025 Piojitos. All rights reserved</p>
+  </footer>
+</body>
+</html>

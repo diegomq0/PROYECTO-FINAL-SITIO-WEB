@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Piojitos</title>
+    <link rel="stylesheet" href="css/ProdAdmn.css">
+    <link rel="shortcut icon" href="img/Piojitos-Logo.svg">
+</head>
+
+<body>
+    <header class="header-container">
+        <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+            <img src="img/Piojitos-01.svg" alt="Piojitos Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="sobrenosotros.html">sobre nosotros</a></li>
+                <li><a href="promociones.html">promociones</a></li>
+                <li><a href="ProductosCliente.html">productos</a></li>
+                <li><a href="citas.html">agendar cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products" style="text-align: center;margin-top: 20px;">
+            <h1>Productos</h1>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="categoria('Alimentos', this)">Alimentos</button>
+                <button class="tab-btn" onclick="categoria('Farmacia' , this)">Farmacia</button>
+                <button class="tab-btn" onclick="categoria('Accesorios' , this)">Accesorios</button>
+            </div>
+
+            <div id="carousel-container" class="carousel-container" style=" overflow: scroll;width: 100vw;">
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+      <a href="mapaSitio.html"><img src="img/mapa-mental.png" alt="Mapa del Sitio" /></a>
+    </div>
+    <p>© 2025 Piojitos. All rights reserved</p>
+  </footer>
+    <script src="js/prodAdmn.js"></script>
+
+</body>
+
+</html>

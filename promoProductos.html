@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promociones | Piojitos</title>
+  <link rel="shortcut icon" href="img/Piojitos-Logo.svg">
+  <link rel="stylesheet" href="https://api.fontshare.com/css?f[]=satoshi@1,300,301,700&f[]=clash-grotesk@1,200,201,600&f[]=quicksand@1,500,600,700&display=swap">
+  <style>
+    /* === RESET Y ESTILO GENERAL === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    body {
+      background-color: #fbfbf0;
+      color: #2f2f2f;
+      overflow-x: hidden;
+    }
+
+    main {
+      padding: 0 2rem;
+    }
+
+    /* === HEADER Y NAV === */
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+      background-color: #fbfbf0;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #b695d9;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      color: #9e77b7;
+    }
+
+    /* === TÍTULOS Y SECCIONES === */
+    .main-section {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .main-section h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .main-section p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    /* === TARJETAS === */
+    .card,
+    .card-reverse {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-content,
+    .card-content-reverse {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .card-image,
+    .card-image-reverse {
+      flex: 1 1 250px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-image img,
+    .card-image-reverse img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+    }
+
+    .card-text,
+    .card-text-reverse {
+      flex: 2 1 300px;
+      padding: 20px;
+    }
+
+    .card-text h3,
+    .card-text-reverse h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .card-text p,
+    .card-text-reverse p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* === CATEGORÍAS === */
+    .container-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card-category {
+      height: 18rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 2rem;
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-category:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+     .category-nuevo {
+      background-image: linear-gradient(#00000080, #00000080), url('img/productos.jpg');
+    }
+
+    .category-favoritos {
+      background-image: linear-gradient(#00000080, #00000080), url('img/favgat.jpg');
+    }
+
+    .category-prote {
+      background-image: linear-gradient(#00000080, #00000080), url('img/protegelos.jpg');
+    }
+
+    .card-category span {
+      font-size: 1.6rem;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* === RESPONSIVE === */
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .main-section h2 {
+        font-size: 2rem;
+      }
+
+      .main-section p {
+        font-size: 1rem;
+      }
+
+      .card-content,
+      .card-content-reverse {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card-text,
+      .card-text-reverse,
+      .card-image,
+      .card-image-reverse {
+        text-align: center;
+        flex: 1 1 100%;
+        padding: 1rem;
+      }
+
+      .card-image img,
+      .card-image-reverse img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <header class="header-container">
+      <div class="logo" onclick="location.href='index.html'" style="cursor:pointer;">
+        <img src="img/Piojitos-01.svg" alt="Piojitos Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">inicio</a></li>
+          <li><a href="sobrenosotros.html">sobre nosotros</a></li>
+          <li><a href="promociones.html">promociones</a></li>
+          <li><a href="ProductosCliente.html">productos</a></li>
+          <li><a href="citas.html">agendar cita</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main-section">
+      <h2>PROMOCIONES EN NUESTROS PRODUCTOS</h2>
+      <p>Un espacio libre para todos nuestros amigos peludos en donde podrán encontrar seguridad en sus consultas y tratamientos, además de detallitos para complacerlos.</p>
+
+    <div class="container-categories">
+        <a href="/promoProductos.html" class="card-category category-nuevo">
+          <span>Productos</span>
+        </a>
+        <a href="/promoFavoritos.html" class="card-category category-favoritos">
+          <span>Favoritos</span>
+        </a>
+        <a href="/promoProtegelos.html" class="card-category category-prote">
+          <span>Protegélos</span>
+        </a>
+      </div>
+
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="card-image">
+            <img src="img/gatoComida.png" alt="Descuento Gatos">
+          </div>
+          <div class="card-text">
+            <h3>20% de descuento en croquetas para gato.</h3>
+            <p>¡En <strong>Piojito</strong> queremos consentir a tu felino favorito! Por tiempo limitado, disfruta de un <strong>20% de descuento</strong> en comida premium para gatos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card-reverse">
+        <div class="card-content-reverse">
+          <div class="card-text-reverse">
+            <h3>¡Oferta 2x1 en Juguetes para Mascotas!</h3>
+            <p>En <strong>Piojito</strong>, sabemos que la diversión es esencial. Llévate <strong>2x1</strong> en todos los juguetes: pelotas, peluches y más.</p>
+          </div>
+          <div class="card-image-reverse">
+            <img src="/img/juguete-mordedera-pperro-tuff-stuff.png" alt="Oferta Juguetes">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="card-image">
+            <img src="img/perroReljao.png" alt="Semana del cuidado">
+          </div>
+          <div class="card-text">
+            <h3>Semana del Cuidado Completo</h3>
+            <p>Revisión veterinaria, baño, corte de pelo y desparasitación por un precio especial durante esta semana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="img/facebook-icon.png" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/"><img src="img/instagram-icon.png" alt="Instagram" /></a>
+      <a href="mapaSitio.html"><img src="img/mapa-mental.png" alt="Mapa del Sitio" /></a>
+    </div>
+    <p>© 2025 Piojitos. All rights reserved</p>
+  </footer>
+  </main>
+
+</body>
+
+</html>
